@@ -3,6 +3,7 @@ import csv
 insurances ={}
 columns = []
 line_one = True
+
 with open("insurance.csv",newline="") as csv_file:
     reader = csv.reader(csv_file)
     j = 1
@@ -19,6 +20,24 @@ with open("insurance.csv",newline="") as csv_file:
                 i +=1
             insurances["insurance-"+str(j)] =  internal_dict
             j +=1
-for key , values in insurances.items():
-    print(key +  " values are:")
-    print(values)
+
+def print_insurances():
+    for key , values in insurances.items():
+        print(key +  " values are:")
+        print(values)
+
+# Analysis start here:
+
+# 1- BMI to Cost:
+
+def bmi_to_cost():
+    pass
+# 2- Age to children:
+
+def age_to_children():
+    pass
+# 3-  where the majority lives:
+def find_location_of_mojority():
+    pass
+
+print_insurances()
