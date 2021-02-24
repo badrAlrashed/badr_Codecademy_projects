@@ -37,7 +37,24 @@ def bmi_to_cost():
 def age_to_children():
     pass
 # 3-  where the majority lives:
-def find_location_of_mojority():
-    pass
+def find_location_of_mojority(insurances):
+    regions = {}
+    for insurance in insurances.values():
+        region = insurance["region"]
+        if region in regions:
+            count = regions[region] +1
+        else:
+            count = 1
+        regions[region] = count
+    max = 0
+    region_max = ""
+    for region,n in regions.items():
+        if n > max:
+            max = n 
+            region_max = region
+    print("END")
+    return region_max , max
 
-print_insurances()
+#print_insurances()
+max_region,max = find_location_of_mojority(insurances) 
+print("[the most populated region with a population of {max} is {max_region}".format(max = max, max_region = max_region))
