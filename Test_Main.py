@@ -1,5 +1,5 @@
 import csv
-#create a dict of the csv file # from Github
+#create a dict of the csv file
 insurances ={}
 columns = []
 line_one = True
@@ -22,4 +22,3 @@ with open("insurance.csv",newline="") as csv_file:
 for key , values in insurances.items():
     print(key +  " values are:")
     print(values)
-    
